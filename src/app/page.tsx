@@ -1,3 +1,4 @@
+import { db } from "~/server/db";
 import Link from "next/link";
 
 const mockUrls = [
@@ -12,7 +13,7 @@ const mockImages = mockUrls.map((url, index) => ({
   url,
 }));
 
-export default function HomePage() {
+export default async function HomePage() {
   return (
     <main>
       <div className="flex flex-wrap gap-4">
